@@ -1,0 +1,64 @@
+$white: #fff;
+$black: #000;
+$button: #F6F6F6;
+$accent: #DCDCDC;
+$button-grey: #DCDCDC;
+$dark-grey: #8F9295;
+$font: #1E252C;
+body {
+  justify-items: center;
+  margin-top: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-image: url("/public/images/section-hero.png");
+  width: 1600px;
+  height: 960px;
+}
+.logo {
+  margin-right: 146px;
+  margin-left: 67px;
+  margin-top: 34px;
+}
+.nav {
+  margin-top: 51px;
+  width: 481px;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+}
+.header-container {
+  margin-top: 47px;
+}
+.nav-item__01 {
+  margin-top: 51px;
+  margin-left: 152px;
+  margin-right: 43px;
+  color: $white;
+}
+.nav-item {
+  margin-left: 50px;
+}
+.burger {
+  margin-top: 54px;
+  margin-left: 50px;
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 12.8px;
+
+}
+.burger span {
+  background-color: $white;
+  width: 24px;
+  height: 2.2px
+}
+.burger::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2.2px;
+  background-color: $white;
+  width: 16px;
+}
