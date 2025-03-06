@@ -3,74 +3,96 @@ body {
   margin-top: 0;
 }
 
+@media (min-width: 320px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 1600px;
+    height: 960px;
+  }
+  .logo {
+    margin-right: 146px;
+    margin-left: 67px;
+    margin-top: 34px;
+  }
+  .nav {
+    margin-top: 51px;
+    width: 481px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #fff;
+  }
+  .header-container {
+    margin-top: 47px;
+  }
+  .nav-item__01 {
+    margin-top: 51px;
+    margin-left: 152px;
+    margin-right: 43px;
+    color: #fff;
+  }
+  .nav-item {
+    margin-left: 50px;
+  }
+  .burger {
+    margin-top: 54px;
+    margin-left: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 12.8px;
+    cursor: pointer;
+  }
+  .burger span {
+    background-color: #fff;
+    width: 24px;
+    height: 2.2px;
+  }
+  .burger::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2.2px;
+    background-color: #fff;
+    width: 16px;
+  }
+  .burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .burger.active::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 24px;
+    height: 2.2px;
+    bottom: 28%;
+    -webkit-transform: rotate(-45deg) translate(0, -50%);
+            transform: rotate(-45deg) translate(0, -50%);
+  }
+  .burger.active::after {
+    width: 24px;
+    top: 50%;
+    -webkit-transform: rotate(45deg) translate(0, 50%);
+            transform: rotate(45deg) translate(0, 50%);
+  }
+}
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 320px;
+  height: 693px;
   background-image: url("/public/images/section-hero.png");
-  width: 1600px;
-  height: 960px;
-}
-
-.logo {
-  margin-right: 146px;
-  margin-left: 67px;
-  margin-top: 34px;
-}
-
-.nav {
-  margin-top: 51px;
-  width: 481px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #fff;
-}
-
-.header-container {
-  margin-top: 47px;
-}
-
-.nav-item__01 {
-  margin-top: 51px;
-  margin-left: 152px;
-  margin-right: 43px;
-  color: #fff;
-}
-
-.nav-item {
-  margin-left: 50px;
-}
-
-.burger {
-  margin-top: 54px;
-  margin-left: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 24px;
-  height: 12.8px;
-}
-
-.burger span {
-  background-color: #fff;
-  width: 24px;
-  height: 2.2px;
-}
-
-.burger::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 2.2px;
-  background-color: #fff;
-  width: 16px;
 }
