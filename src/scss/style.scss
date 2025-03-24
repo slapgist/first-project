@@ -14,12 +14,11 @@ $button-padding:12px 45px;
 $border:1px solid #000;
 
 body {
-  margin: 0;
-
+  justify-items: center;
+  margin-top: 0;
 }
 .header-section {
   background-image: url("/public/images/back-ground.png");
-  padding: 26px 15px;
   height: 693px;
 }
 
@@ -30,24 +29,31 @@ body {
 }
 
 .header {
-  background-repeat: no-repeat;
+  width: 320px;
 
+
+  background-repeat: no-repeat;
   display: flex;
   font-family: $font-family;
   justify-content: space-between;
-  align-items: center;
 }
 @media (min-width: 321px) {
   .header {
     display: flex;
+    max-width: 1600px;
+    max-height: 960px;
     width: 100%;
     color: $white;
   }
 }
 .header-logo {
+  width: 137px;
+  height: 29px;
 }
 @media  (min-width: 321px) {
   .header-logo {
+    width: 234px;
+    height: 50px;
   }
 }
 
@@ -84,7 +90,8 @@ body {
 
 }
 .header-logo {
-
+  padding-top: 26px;
+  padding-left: 15px;
 }
 .header-navigation-head {
   display: flex;
@@ -167,6 +174,8 @@ hr {
   width: 22px;
   height: 12px;
   cursor: pointer;
+  padding-top: 35px;
+  padding-right: 15px;
 }
 .burger-menu.active {
   margin-top: 25px;
