@@ -17,10 +17,20 @@ body {
   justify-items: center;
   margin-top: 0;
 }
+.header-section {
+  background-image: url("/public/images/back-ground.png");
+}
+
+@media (min-width: 321px) {
+  .header-section {
+    background-image: url("/public/images/section-hero.png");
+  }
+}
+
 .header {
   width: 320px;
   height: 693px;
-  background-image: url("/public/images/back-ground.png");
+
   background-repeat: no-repeat;
   display: flex;
   font-family: $font-family;
@@ -29,7 +39,6 @@ body {
 @media (min-width: 321px) {
   .header {
     display: flex;
-    background-image: url("/public/images/section-hero.png");
     max-width: 1600px;
     max-height: 960px;
     width: 100%;
