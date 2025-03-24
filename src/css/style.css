@@ -5,6 +5,7 @@ body {
 
 .header-section {
   background-image: url("/public/images/back-ground.png");
+  height: 693px;
 }
 
 @media (min-width: 321px) {
@@ -13,8 +14,6 @@ body {
   }
 }
 .header {
-  width: 320px;
-  height: 693px;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
