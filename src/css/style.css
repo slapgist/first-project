@@ -4,7 +4,6 @@ body {
 
 .header-section {
   background-image: url("/public/images/back-ground.png");
-  padding: 26px 15px;
   height: 693px;
 }
 
@@ -32,7 +31,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     color: #fff;
   }
 }
