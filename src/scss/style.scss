@@ -14,50 +14,56 @@ $button-padding:12px 45px;
 $border:1px solid #000;
 
 body {
+  justify-items: center;
   margin: 0;
+  font-family: $font-family;
 }
 .header-section {
-  background-image: url("/public/images/back-ground.png");
+  width: 320px;
   height: 693px;
+  background-image: url("/public/images/back-ground.png");
+  background-repeat: no-repeat;
 }
-
 @media (min-width: 321px) {
   .header-section {
     background-image: url("/public/images/section-hero.png");
-  }
-}
-
-.header {
-
-  background-repeat: no-repeat;
-  display: flex;
-  font-family: $font-family;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (min-width: 321px) {
-  .header {
-    display: flex;
+    max-width: 1600px;
+    max-height: 960px;
+    width: 100%;
     color: $white;
   }
 }
-.header-logo {
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: montserrat, sans-serif;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 
 }
-@media  (min-width: 321px) {
-  .header-logo {
 
+.header-logo {
+  width: 137px;
+}
+
+@media (min-width: 321px) {
+  .header-logo {
+    width: 234px;
   }
 }
-
 .header-navigation {
   display: none;
-  position: fixed;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: $white;
+  background-color: #fff;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -65,122 +71,217 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   row-gap: 45px;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
-@media  (min-width: 321px) {
+@media (min-width: 321px) {
   .header-navigation {
+    order: -4;
+  }
+}
+
+@media (min-width: 321px) {
+  .header-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: static;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     width: 10%;
     height: 10%;
     background-color: transparent;
   }
 }
-
-.open{
+.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 1s;
   transition: 1s;
-
 }
+
 .header-logo {
-
+  padding-top: 26px;
+  padding-left: 15px;
 }
+
 .header-navigation-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
   text-align: center;
   margin-top: 162px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
-@media  (min-width: 321px) {
+
+@media (min-width: 321px) {
   .header-navigation-head {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    margin-top: 0;
+    column-gap: 15px;
   }
 }
-.header-navigation-item{
+.header-navigation-item {
   margin-bottom: 45px;
 }
-.master{
+
+.master {
   width: 87px;
 }
+
 .catalog {
   width: 97px;
 }
+
 .life {
   width: 44px;
 }
+
 .contacts {
-width: 116px
+  width: 116px;
 }
+
 .header-navigation-item:hover {
   padding-bottom: 8px;
-  border-bottom: 2px solid $beige;
+  border-bottom: 2px solid #EAD6BD;
+  -webkit-transition: 0.15s;
   transition: 0.15s;
 }
-.header-other-navigation{
+
+.header-other-navigation {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
 }
+@media (min-width: 321px) {
+  .header-other-navigation {
+    flex-direction: row;
+  }
+}
+
+
 hr {
   width: 280px;
   height: 0.5px;
-  background-color: $light-grey;
+  background-color: #DCDCDC;
   border: 0;
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
   order: -1;
 }
-@media  (min-width: 321px) {
-  hr {display: none;}
+
+@media (min-width: 321px) {
+  hr {
+    display: none;
+  }
 }
 .header-other-navigation-number {
   margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-inline: 45px;
 }
+@media (min-width: 321px) {
+  .header-other-navigation-number {
+    display: inline-block;
+    margin-inline: 0;
+    margin-top: 0;
+  }
+}
+
 .header-navigation-number {
+  -webkit-box-ordinal-group: -31;
+  -ms-flex-order: -32;
   order: -32;
 }
+
 .number {
   padding-block: 5px;
   padding-left: 14px;
 }
+
 .navigation-links {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
   order: -1;
   padding-bottom: 20px;
 }
+@media (min-width: 321px) {
+  .navigation-links {
+    order: 0;
+    padding-bottom: 0;
+    display: flex;
+  }
+}
+
 .navigation-cart {
+  -webkit-box-ordinal-group: -1;
+  -ms-flex-order: -2;
   order: -2;
-  fill: $black;
+  fill: #000;
   text-decoration: none;
 }
+
 .header-navigation-profile {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
   order: -1;
-  fill: $black;
+  fill: #000;
   text-decoration: none;
 }
+
 .burger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 22px;
   height: 12px;
   cursor: pointer;
+  padding-top: 35px;
+  padding-right: 15px;
+  z-index: 50;
 }
+
 .burger-menu.active {
   margin-top: 25px;
   margin-right: 15px;
 }
-.burger.active span {transform: scale(0)}
+
+.burger.active span {
+  transform: scale(0);
+}
 
 .burger-menu.active::before {
   content: "";
   position: absolute;
-  background-color: $black;
+  background-color: #000;
   width: 24px;
   bottom: 45%;
-  transform: rotate(-45deg) translate(0,-50%);
+  transform: rotate(-45deg) translate(0, -50%);
   height: 1px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -189,25 +290,29 @@ hr {
   height: 1px;
   top: 50%;
   transform: rotate(45deg) translate(0, 50%);
-  background-color: $black;
+  background-color: #000;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.burger-menu span{
-  background-color: $white;
+
+.burger-menu span {
+  background-color: #fff;
   width: 22px;
   height: 2.2px;
 }
+
 .burger-menu.active span {
-  background-color: $white;
+  background-color: #fff;
   width: 22px;
   height: 2.2px;
   display: none;
 }
+
 .burger-menu:after {
   content: "";
   position: absolute;
   bottom: 0;
   height: 2.2px;
-  background-color: $white;
+  background-color: #fff;
   width: 15px;
 }
