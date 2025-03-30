@@ -23,6 +23,7 @@ body {
   height: 693px;
   background-image: url("/public/images/back-ground.png");
   background-repeat: no-repeat;
+  flex-direction: column;
 
 }
 @media (min-width: 321px) {
@@ -41,6 +42,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: montserrat, sans-serif;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -87,12 +89,19 @@ body {
     flex-direction: row;
     background-color: transparent;
     justify-content: space-between;
-    order: -32;
     padding-inline: 25px;
     width: auto;
     height: auto;
     padding-top: 50px;
-    flex-basis: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .header-navigation {
+    padding-inline: 0;
+    padding-top: 0;
+    justify-content: normal;
+    width: 0;
+    height: 0;
   }
 }
 .open {
@@ -133,7 +142,6 @@ body {
     flex-direction: row;
     margin-top: 0;
     column-gap: 25px;
-
   }
 }
 
@@ -206,7 +214,7 @@ hr {
 .header-navigation-number {
   -webkit-box-ordinal-group: -31;
   -ms-flex-order: -32;
-  order: -32;
+  order: -1;
 }
 @media (min-width: 321px) {
   .header-navigation-number {
