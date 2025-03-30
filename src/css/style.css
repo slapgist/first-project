@@ -1,7 +1,7 @@
 body {
   justify-items: center;
   margin: 0;
-  font-family: montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .header-section {
@@ -13,11 +13,17 @@ body {
 
 @media (min-width: 321px) {
   .header-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-image: url("/public/images/section-hero.png");
     max-width: 1600px;
     max-height: 960px;
     width: 100%;
     color: #fff;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .header {
@@ -25,9 +31,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: montserrat, sans-serif;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .header-logo {
@@ -57,18 +60,11 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   row-gap: 45px;
+  top: 0;
   width: 100%;
   height: 100%;
-  top: 0;
 }
 
-@media (min-width: 321px) {
-  .header-navigation {
-    -webkit-box-ordinal-group: -3;
-        -ms-flex-order: -4;
-            order: -4;
-  }
-}
 @media (min-width: 321px) {
   .header-navigation {
     display: -webkit-box;
@@ -79,9 +75,19 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    width: 10%;
-    height: 10%;
     background-color: transparent;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-ordinal-group: -31;
+        -ms-flex-order: -32;
+            order: -32;
+    padding-inline: 25px;
+    width: auto;
+    height: auto;
+    padding-top: 50px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 .open {
@@ -111,6 +117,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  row-gap: 45px;
 }
 
 @media (min-width: 321px) {
@@ -120,31 +127,11 @@ body {
     -ms-flex-direction: row;
     flex-direction: row;
     margin-top: 0;
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
   }
 }
-.header-navigation-item {
-  margin-bottom: 45px;
-}
-
-.master {
-  width: 87px;
-}
-
-.catalog {
-  width: 97px;
-}
-
-.life {
-  width: 44px;
-}
-
-.contacts {
-  width: 116px;
-}
-
 .header-navigation-item:hover {
   padding-bottom: 8px;
   border-bottom: 2px solid #EAD6BD;
@@ -152,6 +139,14 @@ body {
   transition: 0.15s;
 }
 
+@media (min-width: 321px) {
+  .header-navigation-item:hover {
+    padding-bottom: 0px;
+    border-bottom: none;
+    -webkit-transition: 0;
+    transition: 0;
+  }
+}
 .header-other-navigation {
   position: relative;
   display: -webkit-box;
@@ -166,10 +161,15 @@ body {
 
 @media (min-width: 321px) {
   .header-other-navigation {
+    position: static;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    vertical-align: middle;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
   }
 }
 hr {
@@ -197,9 +197,15 @@ hr {
 
 @media (min-width: 321px) {
   .header-other-navigation-number {
-    display: inline-block;
-    margin-inline: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-top: 0;
+    white-space: nowrap;
+    margin-inline: 0;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
   }
 }
 .header-navigation-number {
@@ -208,6 +214,13 @@ hr {
   order: -32;
 }
 
+@media (min-width: 321px) {
+  .header-navigation-number {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
 .number {
   padding-block: 5px;
   padding-left: 14px;
@@ -222,13 +235,16 @@ hr {
 
 @media (min-width: 321px) {
   .navigation-links {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
     padding-bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
   }
 }
 .navigation-cart {
