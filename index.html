@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tasks-manager</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="page-container">
+    <aside class="burger-sidebar-hidden hidden" id="burger-sidebar-hidden">
+        <div class="button-container">
+            <button class="button" id="button-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <path d="m9 18 6-6-6-6"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="header-panel">
+            <div class="button-container focused">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M18 17V9"></path>
+                        <path d="M13 17V5"></path>
+                        <path d="M8 17v-3"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="button-container">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <path d="M8 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                        <path d="M3 10h18"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="button-container">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="sidebar-wrapper">
+            <div class="button-container focused">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="button-container">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="button-container">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <line x1="4" x2="20" y1="9" y2="9"></line>
+                        <line x1="4" x2="20" y1="15" y2="15"></line>
+                        <line x1="10" x2="8" y1="3" y2="21"></line>
+                        <line x1="16" x2="14" y1="3" y2="21"></line>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </aside>
+    <aside class="burger-sidebar" id="burger-sidebar">
+        <header class="sidebar-header">
+            <div class="header">
+                <div class="img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img-svg">
+                        <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                        <path d="M20 3v4"></path>
+                        <path d="M22 5h-4"></path>
+                        <path d="M4 17v2"></path>
+                        <path d="M5 18H3"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="title">
+                        Smart Todo
+                    </h2>
+                    <p class="subtitle">
+                        Dashboard
+                    </p>
+                </div>
+            </div>
+            <button class="button" id="sidebar-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="button-img">
+                    <path d="m15 18-6-6 6-6"></path>
+                </svg>
+            </button>
+        </header>
+        <div class="header-panel">
+            <div class="item focused">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <path d="M3 3v18h18"></path>
+                    <path d="M18 17V9"></path>
+                    <path d="M13 17V5"></path>
+                    <path d="M8 17v-3"></path>
+                </svg>
+                <span class="title">Задачи</span>
+            </div>
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <path d="M8 2v4"></path>
+                    <path d="M16 2v4"></path>
+                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                    <path d="M3 10h18"></path>
+                </svg>
+                <span class="title">Календарь</span>
+            </div>
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span class="title">Настройки</span>
+            </div>
+        </div>
+        <section class="sidebar-wrapper">
+            <div class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <span class="title">Поиск</span>
+            </div>
+            <div class="search-input">
+                <input class="input" placeholder="Найти задачи...">
+            </div>
+            <div class="sidebar-status">
+                <div class="title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                    <span class="subtitle">Статус</span>
+                </div>
+                <div class="status-variants">
+                    <div class="status-variant">
+                        <input class="button radio" type="radio" name="active" id="status-01">
+                        <label class="title filter" for="status-01">Все задачи</label>
+                        <span class="subtitle"></span>
+                    </div>
+                    <div class="status-variant">
+                        <input class="button radio" type="radio" name="active" id="status-02">
+                        <label class="title filter" for="status-02">Активные</label>
+                        <span class="subtitle"></span>
+                    </div>
+                    <div class="status-variant">
+                        <input class="button radio" type="radio" name="active" id="status-03">
+                        <label class="title filter" for="status-03">Выполненные</label>
+                        <span class="subtitle"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="sidebar-tags">
+                <div class="title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="img">
+                        <line x1="4" x2="20" y1="9" y2="9"></line>
+                        <line x1="4" x2="20" y1="15" y2="15"></line>
+                        <line x1="10" x2="8" y1="3" y2="21"></line>
+                        <line x1="16" x2="14" y1="3" y2="21"></line>
+                    </svg>
+                    <span class="subtitle">Теги</span>
+                </div>
+                <div class="checkboxes">
+                    <div class="checkbox">
+                        <div class="button-container-filter">
+                            <input type="checkbox" id="tags-01" class="button check filter" data-filter="@дом">
+                        </div>
+                        <label for="tags-01" class="description-check description">@дом</label>
+                        <span></span>
+                    </div>
+                    <div class="checkbox">
+                        <div class="button-container-filter">
+                            <input type="checkbox" id="tags-02" class="button check filter" data-filter="@здоровье">
+
+                        </div>
+                        <label for="tags-02" class="description-check description">@здоровье</label>
+                        <span></span>
+                    </div>
+                    <div class="checkbox">
+
+                        <div class="button-container-filter ">
+                            <input type="checkbox" id="tags-03" class="button check filter" data-filter="@работа">
+                        <label for="tags-03" class="description-check description">@работа</label>
+
+                    </div>
+                </div>
+            </div>
+                </div>
+        </section>
+    </aside>
+    <div class="main">
+        <header class="main-header">
+            <div class="title-container">
+                <h1 class="title">Мои задачи</h1>
+                <p class="subtitle">Управляйте своими задачами эффективно</p>
+            </div>
+            <div class="all-tasks">
+                <div class="task">
+                    <div class="type-01 type"></div>
+                    <span class="title">Всего:</span>
+                </div>
+                <div class="task">
+                    <div class="type-02 type"></div>
+                    <span class="title">Активных:</span>
+                </div>
+                <div class="task">
+                    <div class="type-03 type"></div>
+                    <span class="title">Готово:</span>
+                </div>
+            </div>
+        </header>
+        <div class="main-section" >
+            <div class="search-container">
+                <form class="search" onsubmit="return false;">
+                    <div class="search-input">
+                        <input class="input" id="create-task" type="text"
+                               placeholder="Добавить новую задачу... (используйте @тег для тегов)">
+                    </div>
+                    <button class="button" type="submit" id="button-create">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="img">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <span class="title">
+                    Добавить
+                </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <section class="tasks" id="add-task">
+
+        </section>
+    </div>
+</div>
+<script>
+    const sidebar = document.querySelector('#burger-sidebar');
+    const button = document.querySelector('#sidebar-btn');
+    const another = document.querySelector('#burger-sidebar-hidden');
+    const hiddenButton = document.querySelector('#button-hidden');
+    button.addEventListener('click', function () {
+        sidebar.classList.toggle('hidden');
+        sidebar.classList.toggle('burger-sidebar');
+        if (sidebar.classList.contains('hidden')) {
+            another.classList.toggle('hidden');
+        }
+    })
+    hiddenButton.addEventListener('click', function () {
+        sidebar.classList.toggle('hidden');
+        sidebar.classList.toggle('burger-sidebar');
+        if (sidebar.classList.contains('burger-sidebar')) {
+            another.classList.add('hidden');
+        }
+    })
+</script>
+<script>
+    const tasks = document.querySelector('.tasks');
+    const input = document.querySelector('#create-task');
+    const buttonAdd = document.querySelector('#button-create');
+    buttonAdd.addEventListener('click', function () {
+        const inputValue = input.value.trim();
+        if (inputValue === '') return;
+
+        const section = document.querySelector('#add-task');
+
+        section.insertAdjacentHTML('beforeend', `
+        <div class="task task-js">
+            <button class="button task-button" role="radio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+            </button>
+            <div class="title-container">
+                <p class="title task-value">${inputValue}</p>
+            </div>
+        </div>
+
+    `);
+        input.value = '';
+    });
+
+    tasks.addEventListener('click',  (event) => {
+        const  target  = event.target;
+
+
+        const paragraph = target.querySelector('.title');
+        const buttonDone = target.closest('button');
+
+
+        if (target.closest('.task-js')) {
+            
+            const svgDone = buttonDone.querySelector('.img-done');
+            console.log(svgDone)
+            if (svgDone === null) {buttonDone.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="img done img-done">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+            </svg>`;}
+            else {
+                buttonDone.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>`;
+            }
+        }
+console.log(target)
+    })
+
+    const radios = document.querySelectorAll('.radio');
+
+    radios.forEach(radio => {
+        radio.addEventListener('click', () => {
+            radios.forEach(r => r.innerHTML = ``)
+            radio.innerHTML = `<span class="focused">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="img"><circle cx="12" cy="12"
+                                                             r="10"></circle></svg>
+            </span>`;
+
+        })})
+    const checkboxesContainer = document.querySelector('.checkboxes');
+
+    checkboxesContainer.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target.closest('.checkbox')) {
+            const checkboxContainer = target.closest('.button-container-filter');
+            const checkbox = target.closest('.check'); // исправьте, если по классу у вас другой контейнер
+            let svg = checkboxContainer.querySelector('.img');
+
+            // Добавление или удаление SVG
+            if (svg === null) {
+                checkbox.insertAdjacentHTML('beforebegin', `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                    <path d="M20 6 9 17l-5-5"></path>
+                </svg>`);
+            } else {
+                svg.remove();
+            }
+
+            // Собираем все выбранные фильтры
+            const checkedFilters = Array.from(document.querySelectorAll('.check:checked'))
+                .map(checkbox => checkbox.getAttribute('data-filter'));
+
+            // Получаем все задачи
+            const tasks = document.querySelectorAll('.task-js');
+
+            // Применяем фильтр по выбранным чекбоксам
+            tasks.forEach(task => {
+                const taskTitle = task.querySelector('.task-value');
+                const taskText = taskTitle.textContent;
+
+                // Проверяем, содержит ли задача любой из фильтров
+                const matchesFilter = checkedFilters.some(filter => taskText.includes(filter));
+
+                // Если есть хотя бы один совпадающий фильтр Или ни выбран ни одного чекбокса, показываем все
+                if (checkedFilters.length === 0 || matchesFilter) {
+                    task.style.display = '';
+                } else {
+                    task.style.display = 'none';
+                }
+            });
+        }
+    });
+    const statusVariants = document.querySelector('.status-variants');
+    statusVariants.addEventListener('click', (event) => {
+        const target = event.target;
+        const radioButton = target.closest('.radio');
+        console.log(radioButton)
+        if (radioButton.checked) {
+            const filterContainer = target.closest('.status-variant');
+            const filter = filterContainer.querySelector('.filter');
+            const filterValue = filter.textContent;
+            console.log(filterValue)
+            const tasks = document.querySelectorAll('.task-js');
+            if (filterValue === 'Все задачи') {
+                return
+            }
+            if (filterValue === 'Активные') {
+                tasks.forEach(task => {
+                    const done = task.querySelector('.img-done');
+                    console.log(done)
+                    if (done) {
+                        task.style.display = 'none';
+                    }
+                    else {
+                        task.style.display = ''
+                    }
+                })
+            }
+            if (filterValue === 'Выполненные') {
+                tasks.forEach(task => {
+                    const done = task.querySelector('.img-done');
+                    console.log(done)
+                    if (done) {
+                        task.style.display = '';
+                    }
+                    else {
+                        task.style.display = 'none'
+                    }
+                })
+            }
+
+        }
+    })
+
+    // checkboxes.forEach(checkbox => {
+    //         // Удаляем старый SVG, если есть
+    //         const nextElem = checkbox.nextElementSibling;
+    //         if (nextElem && nextElem.tagName === 'SVG') {
+    //             nextElem.remove();
+    //         }
+    //
+    //         // Если чекбокс отмечен — вставляем SVG
+    //         if (checkbox.checked) {
+    //             checkbox.insertAdjacentHTML('afterend', `
+    //     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+    //       <path d="M20 6 9 17l-5-5"></path>
+    //     </svg>
+    //   `);
+    //         }
+    // });
+    // const buttonContainer = document.querySelector('.button-container');
+    // const task = document.querySelectorAll('.task-js');
+    // const checkboxImage = document.querySelectorAll('.checkbox-img');
+    //
+    // const label = document.querySelector('.description-check');
+    // const filterValue = label ? label.textContent : '';
+    // const taskP = document.querySelector('.task-value');
+    // const taskValue = taskP ? taskP.textContent : '';
+    // checkboxes.addEventListener ('click', (event) => {
+    //    if(!event.target.classList.contains('check')) {return false}
+    //     const checkboxes = document.querySelectorAll('.check');
+    //
+    //     checkboxes.forEach(checkbox => {
+    //         // Удаляем старый SVG, если есть
+    //         const nextElem = checkbox.nextElementSibling;
+    //         if (nextElem && nextElem.tagName === 'SVG') {
+    //             nextElem.remove();
+    //         }
+    //
+    //         // Если чекбокс отмечен — вставляем SVG
+    //         if (checkbox.checked) {
+    //             checkbox.insertAdjacentHTML('afterend', `
+    //     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+    //       <path d="M20 6 9 17l-5-5"></path>
+    //     </svg>
+    //   `);
+    //         }
+    //     });
+    //    const { target } = event.target;
+    //    const hasSVG = buttonContainer.querySelector('svg') !== null;
+    //     const task = document.querySelectorAll('.task-js');
+    //    if (hasSVG) {
+    //        const filterValue = checkboxes.dataset.filter;
+    //    }
+    // })
+
+
+   /* checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('click', () => {
+            const taskElements = document.querySelectorAll('.task-js');
+            const buttonContainer = document.querySelector('.button-container-filter');
+            console.log(buttonContainer)
+            // Обновляем SVG-иконки рядом с чекбоксами
+            checkboxes.forEach(cb => {
+                const nextElem = cb.nextElementSibling;
+                if (nextElem && nextElem.tagName.toLowerCase() === 'svg') {
+                    nextElem.remove();
+                }
+                if (cb.checked) {
+                    cb.insertAdjacentHTML('afterend', `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+                        <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                `);
+                }
+            });
+
+            // Проверка наличия SVG в buttonContainer
+            const hasSVG = buttonContainer.querySelector('svg') !== null;
+
+            if (hasSVG) {
+                const filterElement = document.querySelector('.filter');
+                console.log(filterElement);
+                if (!filterElement) return; // если элемента нет, ничего не делаем
+
+                const filterValue = filterElement.dataset.filter;
+
+                // Фильтрация задач по dataset фильтру
+                taskElements.forEach(task => {
+                    // Предположим, что у задач есть data-filter атрибут
+                    const taskFilter = task.dataset.filter; // или getAttribute('data-filter')
+                    if (taskFilter && taskFilter.includes(filterValue)) {
+                        task.style.display = '';
+                    } else {
+                        task.style.display = 'none';
+                    }
+                });
+            }
+        });
+    });*/
+
+    //
+    // const checkboxes = document.querySelector('.checkboxes');
+    //
+    // checkboxes.addEventListener('click', (event) => {
+    //
+    //     const { target } = event;
+    //
+    //     if (!target.classList.contains('check')) return false;
+    //
+    //     // надо найти родителя с классом checkbox
+    //     const checkbox = target.closest('.checkbox');
+    //     const description = checkbox.querySelector('.description');
+    //     const descriptionText = description.textContent.trim();
+    //
+    //     const isChecked = target.querySelector('.focus');
+    //
+    //     if (isChecked) {
+    //         target.innerHTML = '';
+    //     } else {
+    //         target.innerHTML = `
+    //             <span class="focus">
+    //                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+    //                     <path d="M20 6 9 17l-5-5"></path>
+    //                 </svg>
+    //             </span>`;
+    //     }
+    //
+    //     const tasks = document.querySelectorAll('.task');
+    //
+    //     tasks.forEach(task => {
+    //         const title = task.querySelector('.title');
+    //
+    //         const isCheck = target.querySelector('.focus');
+    //
+    //         if (title.textContent.includes(descriptionText)) {
+    //             task.style.display = isCheck ? 'block' : 'none';
+    //         } else {
+    //             // Должно проверяться по всем выбранным чекбоксам
+    //
+    //             const allChecked = Array.from(checkboxes2).every(check => {
+    //                 const checkFocus = check.querySelector('.focus');
+    //                 return !checkFocus || title.textContent.includes(check.closest('.checkbox').querySelector('.description').textContent.trim());
+    //             });
+    //
+    //             task.style.display = allChecked ? 'block' : 'none';
+    //         }
+    //     });
+    //
+    // });
+
+    // checkboxes.forEach(check => {
+    //     check.addEventListener('click', () => {
+    //         const isChecked = check.querySelector('.focus');
+    //
+    //         if (isChecked) {
+    //             check.innerHTML = '';
+    //         } else {
+    //             check.innerHTML = `
+    //             <span class="focus">
+    //                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img">
+    //                     <path d="M20 6 9 17l-5-5"></path>
+    //                 </svg>
+    //             </span>`;
+    //         }
+    //         const task = document.querySelectorAll('.task');
+    //         const home = "@дом"
+    //         task.forEach(task => {
+    //             if (task.textContent.includes(home)) {
+    //                 task.style.display = '';
+    //             }
+    //             else {
+    //                 task.style.display = 'none';
+    //             }
+    //         })
+    //         const health = "@здоровье"
+    //         task.forEach(task => {
+    //             if (task.textContent.includes(health)) {
+    //                 task.style.display = '';
+    //             }
+    //             else {
+    //                 task.style.display = 'none';
+    //             }
+    //         })
+    //         const work = "@работа"
+    //         task.forEach(task => {
+    //             if (task.textContent.includes(work)) {
+    //                 task.style.display = '';
+    //             }
+    //             else {
+    //                 task.style.display = 'none';
+    //             }
+    //         })
+    //     })
+    // });
+
+</script>
+<script>
+
+</script>
+</body>
+</html>
